@@ -98,6 +98,7 @@ class Program
             Console.WriteLine("28. Equals / GetHashCode для Point");
             Console.WriteLine("29. Паттерн «Фабрика» (уведомления)");
             Console.WriteLine("30. BankAccount + свой Exception");
+            Console.WriteLine("31. IDisposable + using");
             Console.WriteLine("36. Назад в главное меню");
             Console.Write("\nВыберите задание: ");
 
@@ -134,7 +135,8 @@ class Program
             else if (choice == "28") RunTask(new Task28_PointEquality());
             else if (choice == "29") RunTask(new Task29_NotificationFactory());
             else if (choice == "30") RunTask(new Task30_BankAccountException());
-            else if (choice == "36" || choice == "31") break;
+            else if (choice == "31") RunTask(new Task31_DisposableFileWriter());
+            else if (choice == "36" || choice == "32") break;
         }
     }
 
