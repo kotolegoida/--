@@ -12,13 +12,13 @@ public class Task01_HelloWorld : ITask
     public string[] Requirements => new[] 
     { 
         "Вывести приветственное сообщение на консоль", 
-        "Вывести текущую дату и время" 
+        "Вывести текущую дату в формате dd.MM.yyyy" 
     };
 
     public void Run()
     {
         Console.WriteLine("Hello, World!");
-        Console.WriteLine($"Текущая дата и время: {DateTime.Now}");
+        Console.WriteLine($"Текущая дата: {DateTime.Now:dd.MM.yyyy}");
         Console.WriteLine("\nЗадание выполнено успешно! Нажмите Enter, чтобы продолжить...");
         Console.ReadLine();
     }
