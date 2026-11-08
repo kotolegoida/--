@@ -1,6 +1,7 @@
 using System;
 using Main.Common;
 using Main.Tasks.Level1;
+using Main.Tasks.Level2;
 
 class Program
 {
@@ -13,7 +14,8 @@ class Program
             Console.Clear();
             Console.WriteLine("=== Практикум по C# ===");
             Console.WriteLine("1. Уровень 1 — Базовый");
-            Console.WriteLine("2. Выход");
+            Console.WriteLine("2. Уровень 2 — Средний");
+            Console.WriteLine("3. Выход");
             Console.Write("\nВыберите пункт: ");
 
             string? choice = Console.ReadLine();
@@ -22,6 +24,10 @@ class Program
                 ShowLevel1Menu();
             }
             else if (choice == "2")
+            {
+                ShowLevel2Menu();
+            }
+            else if (choice == "3")
             {
                 break;
             }
@@ -53,66 +59,64 @@ class Program
 
             string? choice = Console.ReadLine();
             
-            if (choice == "1")
+            if (choice == "1") RunTask(new Task01_HelloWorld());
+            else if (choice == "2") RunTask(new Task02_Primitives());
+            else if (choice == "3") RunTask(new Task03_Calculator());
+            else if (choice == "4") RunTask(new Task04_EvenOrOdd());
+            else if (choice == "5") RunTask(new Task05_MultiplicationTable());
+            else if (choice == "6") RunTask(new Task06_DigitSum());
+            else if (choice == "7") RunTask(new Task07_StringReverse());
+            else if (choice == "8") RunTask(new Task08_FizzBuzz());
+            else if (choice == "9") RunTask(new Task09_ArrayStats());
+            else if (choice == "10") RunTask(new Task10_Factorial());
+            else if (choice == "11") RunTask(new Task11_MatrixDiagonal());
+            else if (choice == "12") RunTask(new Task12_Palindrome());
+            else if (choice == "13") RunTask(new Task13_WordCounter());
+            else if (choice == "14") RunTask(new Task14_AgeCalculator());
+            else if (choice == "15") break;
+        }
+    }
+
+    static void ShowLevel2Menu()
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("--- Уровень 2: Средний ---");
+            Console.WriteLine("16. Методы расширения для string");
+            Console.WriteLine("17. StringBuilder vs конкатенация");
+            Console.WriteLine("18. TryParse vs try/catch");
+            Console.WriteLine("19. Свой стек/очередь на массиве");
+            Console.WriteLine("20. Обобщения: Swap<T>, Max<T>");
+            Console.WriteLine("21. enum дни недели");
+            Console.WriteLine("36. Назад в главное меню");
+            Console.Write("\nВыберите задание: ");
+
+            string? choice = Console.ReadLine();
+            
+            if (choice == "16")
             {
-                RunTask(new Task01_HelloWorld());
+                Console.Clear();
+                Console.WriteLine("=== Задание 16. Методы расширения для string ===");
+                Console.WriteLine("Требования: public static методы IsPalindrome(), WordCount(), ReverseString() для string.\n");
+
+                string sample = "Hello CSharp World";
+                string palindromeStr = "Шалаш";
+
+                Console.WriteLine($"Исходная строка: \"{sample}\"");
+                Console.WriteLine($"Перевернутая строка (ReverseString): \"{sample.ReverseString()}\"");
+                Console.WriteLine($"Количество слов (WordCount): {sample.WordCount()}");
+                Console.WriteLine($"Является ли \"{palindromeStr}\" палиндромом (IsPalindrome): {palindromeStr.IsPalindrome()}");
+
+                Console.WriteLine("\nНажмите любую клавишу для продолжения...");
+                Console.ReadKey();
             }
-            else if (choice == "2")
-            {
-                RunTask(new Task02_Primitives());
-            }
-            else if (choice == "3")
-            {
-                RunTask(new Task03_Calculator());
-            }
-            else if (choice == "4")
-            {
-                RunTask(new Task04_EvenOrOdd());
-            }
-            else if (choice == "5")
-            {
-                RunTask(new Task05_MultiplicationTable());
-            }
-            else if (choice == "6")
-            {
-                RunTask(new Task06_DigitSum());
-            }
-            else if (choice == "7")
-            {
-                RunTask(new Task07_StringReverse());
-            }
-            else if (choice == "8")
-            {
-                RunTask(new Task08_FizzBuzz());
-            }
-            else if (choice == "9")
-            {
-                RunTask(new Task09_ArrayStats());
-            }
-            else if (choice == "10")
-            {
-                RunTask(new Task10_Factorial());
-            }
-            else if (choice == "11")
-            {
-                RunTask(new Task11_MatrixDiagonal());
-            }
-            else if (choice == "12")
-            {
-         RunTask(new Task12_Palindrome());
-            }
-            else if (choice == "13")
-            {
-                RunTask(new Task13_WordCounter());
-            }
-            else if (choice == "14")
-            {
-                RunTask(new Task14_AgeCalculator());
-            }
-            else if (choice == "15")
-            {
-                break;
-            }
+            else if (choice == "17") RunTask(new Task17_StringPerformance());
+            else if (choice == "18") RunTask(new Task18_TryParseVsTryCatch());
+            else if (choice == "19") RunTask(new Task19_CustomCollections());
+            else if (choice == "20") RunTask(new Task20_Generics());
+            else if (choice == "21") RunTask(new Task21_DayOfWeekEnum());
+            else if (choice == "36" || choice == "22") break;
         }
     }
 
@@ -125,10 +129,12 @@ class Program
         Console.WriteLine("Требования:");
         foreach (var req in task.Requirements)
         {
-            Console.WriteLine($" - {req}");
+            Console.WriteLine($"- {req}");
         }
         Console.WriteLine(new string('-', 30) + "\n");
 
         task.Run();
+        Console.WriteLine("\nНажмите любую клавишу для продолжения...");
+        Console.ReadKey();
     }
 }
