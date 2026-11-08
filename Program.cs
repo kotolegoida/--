@@ -89,6 +89,14 @@ class Program
             Console.WriteLine("19. Свой стек/очередь на массиве");
             Console.WriteLine("20. Обобщения: Swap<T>, Max<T>");
             Console.WriteLine("21. enum дни недели");
+            Console.WriteLine("22. params-метод + перегрузка");
+            Console.WriteLine("23. Nullable-типы, ??, ?.");
+            Console.WriteLine("24. ООП: Animal → Dog/Cat/Bird");
+            Console.WriteLine("25. Интерфейс IShape + сортировка фигур");
+            Console.WriteLine("26. Паттерн «Стратегия» (скидки)");
+            Console.WriteLine("27. IComparable / IComparer<T> для Student");
+            Console.WriteLine("28. Equals / GetHashCode для Point");
+            Console.WriteLine("29. Паттерн «Фабрика» (уведомления)");
             Console.WriteLine("36. Назад в главное меню");
             Console.Write("\nВыберите задание: ");
 
@@ -116,7 +124,15 @@ class Program
             else if (choice == "19") RunTask(new Task19_CustomCollections());
             else if (choice == "20") RunTask(new Task20_Generics());
             else if (choice == "21") RunTask(new Task21_DayOfWeekEnum());
-            else if (choice == "36" || choice == "22") break;
+            else if (choice == "22") RunTask(new Task22_ParamsAndOverload());
+            else if (choice == "23") RunTask(new Task23_NullableTypes());
+            else if (choice == "24") RunTask(new Task24_AnimalHierarchy());
+            else if (choice == "25") RunTask(new Task25_ShapeSorting());
+            else if (choice == "26") RunTask(new Task26_StrategyDiscount());
+            else if (choice == "27") RunTask(new Task27_StudentSorting());
+            else if (choice == "28") RunTask(new Task28_PointEquality());
+            else if (choice == "29") RunTask(new Task29_NotificationFactory());
+            else if (choice == "36" || choice == "30") break;
         }
     }
 
