@@ -3,10 +3,11 @@ using Main.Common;
 using Main.Tasks.Level1;
 using Main.Tasks.Level2;
 
-class Program
+partial class Program
 {
     static void Main(string[] args)
     {
+        
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
         while (true)
@@ -163,4 +164,4 @@ class Program
         Console.WriteLine("\nНажмите любую клавишу для продолжения...");
         Console.ReadKey();
     }
-}v
+}
