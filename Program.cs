@@ -166,6 +166,8 @@ partial class Program
             Console.WriteLine("43. Множественные типы исключений, порядок catch");
             Console.WriteLine("44. Мини-проект «Todo List» (классы + JSON)");
             Console.WriteLine("45. Мини-проект «Библиотека» + юнит-тесты");
+            Console.WriteLine("46. Git: git stash / stash pop");
+            Console.WriteLine("47. Git: rebase -i (сквош коммитов)");
             Console.WriteLine("51. Назад в главное меню");
             Console.Write("\nВыберите задание: ");
 
@@ -181,6 +183,10 @@ partial class Program
             else if (choice == "43") RunTask(new Task43_ExceptionHandlingOrder());
             else if (choice == "44") RunTask(new Task44_TodoList());
             else if (choice == "45") RunTask(new Task45_Library());
+            else if (choice == "46" || choice == "47") { 
+                Console.WriteLine("Задание выполнено через консоль Git (см. git-notes.md). Нажмите клавишу..."); 
+                Console.ReadKey(); 
+            }
             else if (choice == "51") break;
         }
     }

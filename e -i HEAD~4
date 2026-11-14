@@ -1,0 +1,39 @@
+[33mbb2c084[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/task-35[m[33m)[m fix: маленькая правка 3
+[33mfc61850[m fix: маленькая правка 2
+[33m2a61f5e[m fix: маленькая правка 1
+[33mf292279[m[33m ([m[1;31morigin/feature/task-35[m[33m)[m docs(level3): add git-notes.md for task 46 stash demonstration
+[33m208a6a1[m feat(level3): add task 45 - Library mini-project and unit tests
+[33m393c457[m feat(level3): add task 44 - Todo List mini-project with JSON persistence
+[33mfd5fd81[m feat(level3): add task 44 - Todo List mini-project with JSON persistence
+[33m9da42c3[m feat(level3): add task 43 - exception handling order and finally block
+[33m3c8e551[m feat(level3): add task 42 - CancellationToken implementation
+[33m075d3cc[m feat(level3): add task 41 - Task.WhenAll parallel benchmark
+[33m36ad31f[m feat(level3): add task 40 - async/await and exception handling
+[33mb028840[m feat(level3): add task 39 - yield return iterators
+[33mfcc1c17[m feat(level3): add task 38 - List vs LinkedList benchmark
+[33m42f1474[m feat(level3): add task 37 - Fibonacci memoization
+[33m4a26990[m feat(level2): fix program.cs and task 35 demo
+[33ma0f38ea[m feat(level2): add initial structure for task 35 demonstration
+[33mec004fa[m chore: add gitignore and editorconfig
+[33m322c6ba[m feat: task 34 - LINQ word grouping by first letter with sorted groups and contents
+[33ma2d9c88[m feat: task 33 - LINQ operations on employee list (top-3, avg salary by department, filtering)
+[33m3e3a49e[m feat: task 31 - IDisposable implementation for FileWriter with using and using var
+[33m7734261[m feat: task 30 - BankAccount implementation with custom InsufficientFundsException
+[33m7ce050c[m feat: task 29 - notification factory pattern implementation
+[33m600325d[m feat: update Program.cs menu with tasks 20 and 21
+[33m8780652[m[33m ([m[1;31morigin/level-2[m[33m, [m[1;31morigin/level-1[m[33m)[m feat: task 14 - age calculator
+[33m9392150[m feat: task 13 - word counter dictionary
+[33mca9b724[m feat: task 12 - palindrome check
+[33m5db44de[m feat: task 11 - matrix diagonal sum
+[33mc5d1da6[m feat: task 10 - bubble and insertion sorting
+[33m51fb0fd[m feat: task 09 - array min max sum avg statistics
+[33m08fefcb[m feat: task 08 - fizzbuzz implementation
+[33m8f94a93[m feat: task 07 - string reverse without linq
+[33m6258fc3[m feat: task 06 - digit sum calculation
+[33m1628b9a[m feat: task 05 - multiplication table
+[33m5f50bc7[m feat: task 04 - even or odd number check
+[33m46f6fec[m fix: task 03 - handle division by zero
+[33m0a0a8c3[m feat: task 02 - primitive variables
+[33m15d060c[m feat: task 01 - hello world and date
+[33md151bba[m feat: setup project structure and main menu
+[33me50b013[m Initial commit
