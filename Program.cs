@@ -170,6 +170,7 @@ partial class Program
             Console.WriteLine("47. Git: rebase -i (сквош коммитов)");
             Console.WriteLine("48. Git: теги (v1.0.0)");
             Console.WriteLine("49. Git: восстановление через reflog");
+            Console.WriteLine("50. Git: симуляция bisect (поиск плохого коммита)");
             Console.WriteLine("51. Назад в главное меню");
             Console.Write("\nВыберите задание: ");
 
@@ -185,7 +186,8 @@ partial class Program
             else if (choice == "43") RunTask(new Task43_ExceptionHandlingOrder());
             else if (choice == "44") RunTask(new Task44_TodoList());
             else if (choice == "45") RunTask(new Task45_Library());
-            else if (choice == "46" || choice == "47" || choice == "48" || choice == "49") { 
+           else if (choice == "46" || choice == "47" || choice == "48" || choice == "49" || choice == "50")
+            { 
                 Console.WriteLine("Задание выполнено через консоль Git (см. git-notes.md). Нажмите клавишу..."); 
                 Console.ReadKey(); 
             }
