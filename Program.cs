@@ -158,12 +158,15 @@ partial class Program
             Console.WriteLine("--- Уровень 3: Продвинутый ---");
             Console.WriteLine("36. Дубликаты в List (HashSet + GroupBy)");
             Console.WriteLine("37. Мемоизация Фибоначчи через Dictionary");
+            Console.WriteLine("38. List<T> vs LinkedList<T> (бенчмарк)");
             Console.WriteLine("51. Назад в главное меню");
             Console.Write("\nВыберите задание: ");
 
             string? choice = Console.ReadLine();
 
             if (choice == "36") RunTask(new Task36_ListDuplicates());
+            else if (choice == "37") RunTask(new Task37_FibonacciMemoization());
+            else if (choice == "38") RunTask(new Task38_ListVsLinkedList());
             else if (choice == "51") break;
         }
     }
