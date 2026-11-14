@@ -9,10 +9,22 @@
 
 - **git stash list после git stash pop:**
   *(пусто, изменения восстановлены)*
-  
+
   ## Задание 47: Git Rebase Interactive (Squash)
 - **git log --oneline до ребейза:**
   (Список из 4 мелких коммитов)
 
 - **git log --oneline после ребейза (squash):**
   (Все 4 коммита успешно объединены в один аккуратный коммит)
+  
+  ## Задание 48: Git Tags (v1.0.0)
+- **git tag:**
+  `v1.0.0`
+
+- **git show v1.0.0:**
+  ```text
+  tag v1.0.0
+  Tagger: ...
+  Date:   ...
+
+  Release v1.0.0
