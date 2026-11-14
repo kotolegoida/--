@@ -161,6 +161,7 @@ partial class Program
             Console.WriteLine("38. List<T> vs LinkedList<T> (бенчмарк)");
             Console.WriteLine("39. Итераторы и yield return");
             Console.WriteLine("40. Async/Await и обработка исключений");
+            Console.WriteLine("41. Task.WhenAll — параллельно 10 задач");
             Console.WriteLine("51. Назад в главное меню");
             Console.Write("\nВыберите задание: ");
 
@@ -170,6 +171,7 @@ partial class Program
             else if (choice == "37") RunTask(new Task37_FibonacciMemoization());
             else if (choice == "38") RunTask(new Task38_ListVsLinkedList());
             else if (choice == "39") RunTask(new Task39_YieldReturn());
+            else if (choice == "41") RunTask(new Task41_TaskWhenAll());
             else if (choice == "40") RunTask(new Task40_AsyncDownload());
             else if (choice == "51") break;
         }
