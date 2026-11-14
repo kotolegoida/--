@@ -162,6 +162,7 @@ partial class Program
             Console.WriteLine("39. Итераторы и yield return");
             Console.WriteLine("40. Async/Await и обработка исключений");
             Console.WriteLine("41. Task.WhenAll — параллельно 10 задач");
+            Console.WriteLine("42. CancellationToken — отмена через 2 сек");
             Console.WriteLine("51. Назад в главное меню");
             Console.Write("\nВыберите задание: ");
 
@@ -173,6 +174,7 @@ partial class Program
             else if (choice == "39") RunTask(new Task39_YieldReturn());
             else if (choice == "41") RunTask(new Task41_TaskWhenAll());
             else if (choice == "40") RunTask(new Task40_AsyncDownload());
+            else if (choice == "42") RunTask(new Task42_CancellationToken());
             else if (choice == "51") break;
         }
     }
