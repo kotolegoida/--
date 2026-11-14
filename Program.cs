@@ -2,6 +2,7 @@ using System;
 using Main.Common;
 using Main.Tasks.Level1;
 using Main.Tasks.Level2;
+using Main.Tasks.Level3;
 
 partial class Program
 {
@@ -16,7 +17,8 @@ partial class Program
             Console.WriteLine("=== Практикум по C# ===");
             Console.WriteLine("1. Уровень 1 — Базовый");
             Console.WriteLine("2. Уровень 2 — Средний");
-            Console.WriteLine("3. Выход");
+            Console.WriteLine("3. Уровень 3 — Продвинутый");
+            Console.WriteLine("4. Выход");
             Console.Write("\nВыберите пункт: ");
 
             string? choice = Console.ReadLine();
@@ -26,14 +28,16 @@ partial class Program
             }
             else if (choice == "2")
             {
-                ShowLevel2Menu();
+           ShowLevel2Menu();
             }
             else if (choice == "3")
             {
+                ShowLevel3Menu(); 
+            }
+            else if (choice == "4")
+            {
                 break;
             }
-        }
-    }
 
     static void ShowLevel1Menu()
     {
@@ -146,6 +150,23 @@ partial class Program
             else if (choice == "36" || choice == "35") break;
         }
     }
+    static void ShowLevel3Menu()
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("--- Уровень 3: Продвинутый ---");
+            Console.WriteLine("36. Дубликаты в List (HashSet + GroupBy)");
+            Console.WriteLine("37. Мемоизация Фибоначчи через Dictionary");
+            Console.WriteLine("51. Назад в главное меню");
+            Console.Write("\nВыберите задание: ");
+
+            string? choice = Console.ReadLine();
+
+            if (choice == "36") RunTask(new Task36_ListDuplicates());
+            else if (choice == "51") break;
+        }
+    }
 
     static void RunTask(ITask task)
     {
@@ -164,4 +185,6 @@ partial class Program
         Console.WriteLine("\nНажмите любую клавишу для продолжения...");
         Console.ReadKey();
     }
+    }
+}
 }
