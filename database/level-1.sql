@@ -37,3 +37,12 @@ SELECT
     MAX(Salary) AS MaxSalary,
     SUM(CASE WHEN Salary > 50000 THEN 1 ELSE 0 END) AS HighPaidEmployeesCount
 FROM Employees;
+
+SELECT 
+    DepartmentId,
+    COUNT(*) AS EmployeeCount,
+    AVG(Salary) AS AverageSalary,
+    SUM(Salary) AS TotalSalary
+FROM Employees
+GROUP BY DepartmentId
+ORDER BY AverageSalary DESC;
