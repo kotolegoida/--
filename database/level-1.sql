@@ -46,3 +46,12 @@ SELECT
 FROM Employees
 GROUP BY DepartmentId
 ORDER BY AverageSalary DESC;
+
+SELECT 
+    DepartmentId,
+    COUNT(*) AS EmployeeCount,
+    AVG(Salary) AS AverageSalary
+FROM Employees
+GROUP BY DepartmentId
+HAVING AVG(Salary) > 50000
+ORDER BY AverageSalary ASC;
