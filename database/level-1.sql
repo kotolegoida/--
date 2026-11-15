@@ -55,3 +55,13 @@ FROM Employees
 GROUP BY DepartmentId
 HAVING AVG(Salary) > 50000
 ORDER BY AverageSalary ASC;
+
+SELECT TOP 2
+    DepartmentId,
+    COUNT(*) AS FilteredEmployeeCount,
+    MAX(Salary) AS MaxDepartmentSalary
+FROM Employees
+WHERE Salary >= 45000
+GROUP BY DepartmentId
+HAVING COUNT(*) > 1
+ORDER BY MaxDepartmentSalary DESC;
