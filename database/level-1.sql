@@ -65,3 +65,34 @@ WHERE Salary >= 45000
 GROUP BY DepartmentId
 HAVING COUNT(*) > 1
 ORDER BY MaxDepartmentSalary DESC;
+
+SELECT 
+    e.EmployeeName,
+    d.DepartmentName,
+    e.Salary
+FROM Employees AS e
+INNER JOIN Departments AS d 
+    ON e.DepartmentId = d.DepartmentId
+ORDER BY d.DepartmentName ASC, e.Salary DESC;
+
+SELECT 
+    e.EmployeeId,
+    e.EmployeeName
+FROM Employees AS e
+LEFT JOIN EmployeeProjects AS ep 
+    ON e.EmployeeId = ep.EmployeeId
+WHERE ep.EmployeeId IS NULL;
+
+SELECT 
+    e.EmployeeName,
+    d.DepartmentName,
+    p.ProjectName,
+    ep.Hours
+FROM Employees AS e
+INNER JOIN Departments AS d 
+    ON e.DepartmentId = d.DepartmentId
+INNER JOIN EmployeeProjects AS ep 
+    ON e.EmployeeId = ep.EmployeeId
+INNER JOIN Projects AS p 
+    ON ep.ProjectId = p.ProjectId
+ORDER BY d.DepartmentName ASC, e.EmployeeName ASC, p.ProjectName ASC;
